@@ -1,0 +1,278 @@
+oot@ip-172-31-22-247:/home/ubuntu# docker container run -d -p 5000:5000 --name shan_registry registry
+Unable to find image 'registry:latest' locally
+latest: Pulling from library/registry
+619be1103602: Pull complete 
+5daf2fb85fb9: Pull complete 
+ca5f23059090: Pull complete 
+8f2a82336004: Pull complete 
+68c26f40ad80: Pull complete 
+Digest: sha256:fb9c9aef62af3955f6014613456551c92e88a67dcf1fc51f5f91bcbd1832813f
+Status: Downloaded newer image for registry:latest
+1ce87591d201b77e949998c5d3dbe75056f95ed69ea5eb60f360ef85cba7b5a4
+root@ip-172-31-22-247:/home/ubuntu# docker inspect 1c
+[
+    {
+        "Id": "1ce87591d201b77e949998c5d3dbe75056f95ed69ea5eb60f360ef85cba7b5a4",
+        "Created": "2024-04-23T17:47:00.842369834Z",
+        "Path": "/entrypoint.sh",
+        "Args": [
+            "/etc/docker/registry/config.yml"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 1683,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2024-04-23T17:47:01.393832709Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:9363667f8aecb904d1f10cef4ca936f6507d25f0a50b103b55f78d336dbabe57",
+        "ResolvConfPath": "/var/lib/docker/containers/1ce87591d201b77e949998c5d3dbe75056f95ed69ea5eb60f360ef85cba7b5a4/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/1ce87591d201b77e949998c5d3dbe75056f95ed69ea5eb60f360ef85cba7b5a4/hostname",
+        "HostsPath": "/var/lib/docker/containers/1ce87591d201b77e949998c5d3dbe75056f95ed69ea5eb60f360ef85cba7b5a4/hosts",
+        "LogPath": "/var/lib/docker/containers/1ce87591d201b77e949998c5d3dbe75056f95ed69ea5eb60f360ef85cba7b5a4/1ce87591d201b77e949998c5d3dbe75056f95ed69ea5eb60f360ef85cba7b5a4-json.log",
+        "Name": "/shan_registry",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "5000/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "5000"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                20,
+                141
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/dadc2aaab562270bd039b2d3e02b187ef3002906eb856736e549c913534f3274-init/diff:/var/lib/docker/overlay2/7bdecb068e0ba73f8bc65c4c6103312dc281c6b869ce368cf234299c4b9b295c/diff:/var/lib/docker/overlay2/27471da3dd33f530b1caecdca123d40ed473456214111525b7e181f8c2bcf009/diff:/var/lib/docker/overlay2/622311d51ca3ce8e786d4ee3f04728e79847e61fe31eafb19058109b3c2bc9c8/diff:/var/lib/docker/overlay2/3272c962d1f4e248d14d417718e399084351e80662fa38bcf4f3db7159074acf/diff:/var/lib/docker/overlay2/098632ccc578c1d62353c6b79a600bfb2a450ccaa4b6cc9e50235efb810aaf2c/diff",
+                "MergedDir": "/var/lib/docker/overlay2/dadc2aaab562270bd039b2d3e02b187ef3002906eb856736e549c913534f3274/merged",
+                "UpperDir": "/var/lib/docker/overlay2/dadc2aaab562270bd039b2d3e02b187ef3002906eb856736e549c913534f3274/diff",
+                "WorkDir": "/var/lib/docker/overlay2/dadc2aaab562270bd039b2d3e02b187ef3002906eb856736e549c913534f3274/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "24223ed68b8dad7e076d2fa0c9e2065a49dc001178b7a384195cb7ba3224186d",
+                "Source": "/var/lib/docker/volumes/24223ed68b8dad7e076d2fa0c9e2065a49dc001178b7a384195cb7ba3224186d/_data",
+                "Destination": "/var/lib/registry",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "1ce87591d201",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/etc/docker/registry/config.yml"
+            ],
+            "Image": "registry",
+            "Volumes": {
+                "/var/lib/registry": {}
+            },
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "e290040d7bb2c4d5eafb260c8cbe58a6b79804e97b9eae546fa0e519bde977bd",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "5000/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "5000"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "5000"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/e290040d7bb2",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "71dcfa0ad1f28d278a1bce0542f68d73642c68049a40b88ec5db34be56a621a9",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "0fbe6f08d33c339cd643a4b896c5477d2d5b12c5f7b6ad0219870e4b82bce45e",
+                    "EndpointID": "71dcfa0ad1f28d278a1bce0542f68d73642c68049a40b88ec5db34be56a621a9",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+root@ip-172-31-22-247:/home/ubuntu# docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+sun          moon      96ce119ba896   4 hours ago   1.06GB
+student      new       3767691ce348   5 hours ago   1.06GB
+student      v1        12c1b11989b9   9 hours ago   1.06GB
+database     v1        414101869003   9 hours ago   632MB
+httpd        latest    fa0099f1c09d   2 weeks ago   148MB
+mysql        latest    6f343283ab56   4 weeks ago   632MB
+registry     latest    9363667f8aec   5 weeks ago   25.4MB
+centos       7         eeb6ee3f44bd   2 years ago   204MB
+root@ip-172-31-22-247:/home/ubuntu# curl http://172.0.0.1:5000/v2/_catalog
+^C
+root@ip-172-31-22-247:/home/ubuntu# curl http://127.0.0.1:5000/v2/_catalog
+{"repositories":[]}
+root@ip-172-31-22-247:/home/ubuntu# docker image tag sun:moon 127.0.0.1:5000/sun:moon
+root@ip-172-31-22-247:/home/ubuntu# docker images
+REPOSITORY           TAG       IMAGE ID       CREATED       SIZE
+127.0.0.1:5000/sun   moon      96ce119ba896   4 hours ago   1.06GB
+sun                  moon      96ce119ba896   4 hours ago   1.06GB
+student              new       3767691ce348   5 hours ago   1.06GB
+student              v1        12c1b11989b9   9 hours ago   1.06GB
+database             v1        414101869003   9 hours ago   632MB
+httpd                latest    fa0099f1c09d   2 weeks ago   148MB
+mysql                latest    6f343283ab56   4 weeks ago   632MB
+registry             latest    9363667f8aec   5 weeks ago   25.4MB
+centos               7         eeb6ee3f44bd   2 years ago   204MB
+root@ip-172-31-22-247:/home/ubuntu# docker image push 127.0.0.1:5000/sun:moon
+The push refers to repository [127.0.0.1:5000/sun]
+2ad37bac29eb: Pushed 
+8a24b3d75e91: Pushed 
+f05f8a7d6190: Pushed 
+4f5d425bb6af: Pushed 
+381cbe431c0f: Pushed 
+afe7f933d6e6: Pushing [=================================================> ]  379.3MB/384.4MB
